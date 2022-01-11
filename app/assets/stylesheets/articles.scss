@@ -1,3 +1,49 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.header {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.article-title {
+    font-family: 'Arial';
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.article-title:hover {
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+}
+
+.article-font {
+    font-family: 'Arial';
+    font-size: 1.2em;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.article-column {
+  float: left;
+  width: 40%;
+  padding: 0 10px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
