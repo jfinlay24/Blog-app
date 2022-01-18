@@ -1,12 +1,14 @@
-<h1 class="header">Articles</h1>
+<h1 class="header">Defintely a blog ¯\_(ツ)_/¯</h1>
 
 <ul>
     <% @articles.each do |article| %>
-      <div class="article-column">
-        <div class="card">
-          <h1><%= link_to article.title, article, class: "article-title pretty-font"%></h1>
+      <% unless article.archived? %>
+        <div class="article-column">
+          <div class="card">
+            <h1><%= link_to article.title, article, class: "article-title pretty-font"%></h1>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
 </ul>
 

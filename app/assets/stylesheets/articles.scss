@@ -36,14 +36,29 @@
   padding: 0 10px;
 }
 
+.article-display {
+  width: 60%;
+  padding: 0 10px;
+  display: table;
+}
+
 .card {
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+  border-style: solid;
 }
 
 body {
   font-family: Arial;
   padding: 20px;
   background: #f1f1f1;
+}
+
+.comment {
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-style: solid;
 }

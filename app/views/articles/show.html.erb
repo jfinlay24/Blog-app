@@ -1,16 +1,18 @@
-<h1 class="article-title"><%= @article.title %></h1>
+<div class="article-display">
+  <div class="card">
+    <h1 class="article-title"><%= @article.title %></h1>
+    <p><%= simple_format(@article.body) %></p>
+  </div>
+    <ul>
+      <%= button_to "Edit", edit_article_path(@article) %>
+      <%= button_to "Delete", article_path(@article),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %>
+    </ul>
+    <div class="divider"></div>
+    <h2>Comments</h2>
+      <%= render @article.comments %>
 
-<p><%= @article.body %></p>
-
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-</ul>
-
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+    <h2>Add a comment:</h2>
+    <%= render 'comments/form' %>
+</div>
